@@ -10,12 +10,22 @@ var getNumber = function (theNumber) {
     return result;
 };
 
+//Replace separator in a string
+var getNewString = function (stringToSeparate, separator1, separator2) {
+    var toReplace = stringToSeparate.indexOf(separator1);
+    newString = stringToSeparate.replace(toReplace, separator2);
+    return newString;
+};
 
 
 
+
+
+var myNewString = getNewString = getNewString(stringSeparate, ",", "/");
 var myResult = getNumber(stringToNumber);
 
 
 
 
 console.log(myResult);
+console.log(myNewString);

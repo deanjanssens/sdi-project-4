@@ -17,15 +17,20 @@ var getNewString = function (stringToSeparate, separator1, separator2) {
     return newString;
 };
 
+//Format a number to use a specific number of decimal places
+var getDecimal = function (number1, decimalPlaces) {
+    var decimalResult = number1.toFixed(decimalPlaces);
+    return decimalResult;
+};
 
 
 
 
-var myNewString = getNewString = getNewString(stringSeparate, ",", "/");
 var myResult = getNumber(stringToNumber);
-
-
+var myNewString = getNewString = getNewString(stringSeparate, ",", "/");
+var decimalPlaces = getDecimal(number1, 2);
 
 
 console.log(myResult);
 console.log(myNewString);
+console.log(decimalPlaces);

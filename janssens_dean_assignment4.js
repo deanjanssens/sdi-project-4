@@ -4,6 +4,8 @@ var number1 = 5.2356;
 var stringSeparate = "a,b,c";
 var url = "https://www.fullsail.edu";
 var highestValue = [1, 4, 7, 9, 10, 14, 15];
+var myPhrase = "Have a nice day!";
+
 
 //Return String as a Number
 var getNumber = function (theNumber) {
@@ -36,10 +38,11 @@ var getUrl = function (myURL) {
 
 };
 
+
 //Find smallest value in an array that is greater than a given number
 var getNextHighest = function (arrayValue, number) {
     arrayValue.sort();
-    for (var i = 0; i < arrayValue.length; i++) {
+    for (var i = 0; i <= arrayValue.length; i++) {
         if (arrayValue[i] > number) {
             return arrayValue[i];
         }
@@ -48,12 +51,25 @@ var getNextHighest = function (arrayValue, number) {
 
 
 
+var getStringUppercase = function (phrase){
+    var stringArray = phrase.split(" ");
+    var arrayUppercase = [];
+    var newString;
+    for (var i = 0; i < stringArray.length; i++) {
+        arrayUppercase.push(stringArray[i].charAt(0).toUpperCase() + stringArray[i].substr(1));
+        newString = arrayUppercase.join(" ");
+    }
+    return newString;
+};
+
 
 var myResult = getNumber(stringToNumber);
 var myNewString = getNewString = getNewString(stringSeparate, ",", "/");
 var decimalPlaces = getDecimal(number1, 2);
 var isUrlValid = getUrl(url);
 var nextHighestNumber = getNextHighest(highestValue, 12);
+var splitUppercaseResult = getStringUppercase(myPhrase);
+
 
 
 
@@ -62,3 +78,6 @@ console.log(myNewString);
 console.log(decimalPlaces);
 console.log(isUrlValid);
 console.log(nextHighestNumber);
+console.log(splitUppercaseResult);
+
+

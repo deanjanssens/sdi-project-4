@@ -8,21 +8,25 @@ var myPhrase = "Have a nice day!";
 
 
 //Return String as a Number
-var getNumber = function (theNumber) {
-    var result = parseInt(theNumber);
+var getNumber = function (stringNumber) {
+    var result;
+    result = parseInt(stringNumber);
     return result;
 };
 
 //Replace separator in a string
 var getNewString = function (stringToSeparate, separator1, separator2) {
-    var toReplace = stringToSeparate.indexOf(separator1);
-    newString = stringToSeparate.replace(toReplace, separator2);
-    return newString;
+    var toReplace;
+    var myNewString;
+    toReplace = stringToSeparate.indexOf(separator1);
+    myNewString = stringToSeparate.replace(toReplace, separator2);
+    return myNewString;
 };
 
 //Format a number to use a specific number of decimal places
 var getDecimal = function (number1, decimalPlaces) {
-    var decimalResult = number1.toFixed(decimalPlaces);
+    var decimalResult;
+    decimalResult = number1.toFixed(decimalPlaces);
     return decimalResult;
 };
 
@@ -52,9 +56,10 @@ var getNextHighest = function (arrayValue, number) {
 
 
 var getStringUppercase = function (phrase){
-    var stringArray = phrase.split(" ");
+    var stringArray;
     var arrayUppercase = [];
     var newString;
+    stringArray = phrase.split(" ");
     for (var i = 0; i < stringArray.length; i++) {
         arrayUppercase.push(stringArray[i].charAt(0).toUpperCase() + stringArray[i].substr(1));
         newString = arrayUppercase.join(" ");
